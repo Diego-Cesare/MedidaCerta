@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", setTipo);
 function calcVolume() {
   const comp = Number(document.getElementById("comp").value);
   const larg = Number(document.getElementById("larg").value);
-  const esp = Number(document.getElementById("esp").value);
+  const esp = Number(document.getElementById("esp").value) / 100;
 
   return comp * larg * esp; // volume em m³
 }
@@ -111,4 +111,5 @@ calcBtn.addEventListener("click", (e) => {
   ar.value = "";
   pe.value = "";
   ci.value = "";
+
 });
