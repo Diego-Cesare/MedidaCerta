@@ -6,7 +6,7 @@
     --accent: rgb(255, 93, 147);
     --bg: #f5f5f5;
     --text: #181818;
-    --radius: 12px;
+    --radius: 4px;
 }
 
 * {
@@ -28,11 +28,26 @@ body {
 header {
     display: flex;
     align-items: center;
+    flex-direction: column;
     min-height: 60px;
     background-color: var(--primary);
     width: 100%;
-    padding: 12px;
+    padding: 10px 0px 0px 0px;
     border-radius: 0px 0px 20px 20px;
+}
+
+main .material {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main .material span {
+    font-size: 1.5rem;
+    background-color: var(--primary);
+    color: var(--bg);
+    padding: 0px 10px;
+    border-radius: var(--radius);
 }
 
 header h3 {
@@ -40,6 +55,15 @@ header h3 {
     font-weight: bold;
     color: aliceblue;
 }
+
+.menu button {
+    background-color: transparent;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: var(--bg);
+}
+
 
 /* MAIN */
 main {
@@ -51,8 +75,9 @@ main {
 }
 
 main h3 {
+    max-width: 50%;
     font-size: 1.4rem;
-    border-bottom: dotted 1px var(--secondary);
+    border-bottom: solid 1px var(--text);
     padding: 10px 0px;
     color: var(--text);
     margin: 20px 0;
@@ -67,6 +92,28 @@ main section {
     padding: 20px 0px;
     border-radius: var(--radius);
     width: 100%;
+}
+
+main section .medida-massa{
+    display: flex;
+    flex-direction: column;
+}
+
+main section .medida-massa .descricao, .quantidade {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+main section .medida-massa span {
+    font-size: 1.4rem;
+    border: none;
+}
+
+main section .medida-massa .descricao label {
+    font-size: 1rem;
+    border: none;
 }
 
 main section label {
@@ -88,9 +135,22 @@ main section input {
     outline: none;
 }
 
+main section .medida {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+main section .medida button {
+    background-color: #181818;
+    color: var(--bg);
+    width: 30%;
+    padding: 5px 0px;
+}
+
 /* BUTTON */
 main button {
-    margin: 24px auto;
+    margin: 4px auto;
     border: none;
     padding: 12px 20px;
     background-color: var(--primary);
@@ -103,49 +163,49 @@ main button {
 
 
 /* RESULT */
-main .result {
+footer .result {
     display: flex;
     flex-direction: column;
     padding: 12px 0;
     width: 100%;
 }
 
-main .result h2 {
+footer h2 {
     margin-bottom: 12px;
     border-bottom: solid 1px #ccc;
     font-size: 1.3rem;
-    color: var(--text);
+    color: var(--bg);
 }
 
-main .result span {
-    color: var(--text);
-    font-size: 1.1rem;
+footer .result div span {
+    color: var(--bg);
+    font-size: 1.3rem;
 }
 
-.result__num {
+footer .result {
     display: flex;
-    flex-direction: column;
-    align-items: start;
-    gap: 6px;
+    gap: 10px;
 }
 
 footer {
+    height: 25vh;
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    flex-direction: column;
     background-color: var(--primary);
     width: 100%;
-    padding: 20px 0;
+    padding: 20px;
 }
 
-footer button {
-    border: none;
-    background-color: var(--secondary);
-    padding: 10px 20px;
-    font-size: 16px;
-    color: var(--bg);
-    border-radius: 10px;
+footer div {
+    display: flex;
 }
+
+footer .result div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 
 /* ============================= */
 /* RESPONSIVIDADE */
@@ -165,7 +225,7 @@ footer button {
         margin: 0 auto;
     }
 
-    main .result {
+    footer .result {
         max-width: 500px;
         margin: 0 auto;
     }
@@ -177,7 +237,7 @@ footer button {
     }
 
     main section,
-    main .result {
+    footer .result {
         max-width: 700px;
     }
 

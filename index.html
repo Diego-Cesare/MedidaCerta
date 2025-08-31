@@ -11,31 +11,50 @@
 <body>
     <header>
         <h3>Medida Certa</h3>
+        <div class="menu">
+            <button onclick="setTipo()" id="concre">Concreto</button>
+            <button onclick="setTipo()" id="reboc">Reboco</button>
+            <button onclick="setTipo()" id="conPiso">Contra-piso</button>
+        </div>
     </header>
     <main>
-        <h3 id="tipo">Concreto 3 por 1</h3>
+        <div class="material">
+            <h3 id="tipo">Concreto</h3>
+        </div>
         <section>
-            <label for="">Comprimento</label>
-            <input id="comp" type="text">
-            <label id="tipoLarg" for="">Largura</label>
-            <input id="larg" type="text">
-            <label for="">Espessura</label>
-            <input id="esp" type="text">
+            <div class="medida-massa">
+                <span>Digite o traço da mistura</span>
+                <div class="quantidade">
+                    <input type="number" id="ar" placeholder="Areia" required>
+                    <input type="number" id="pe" placeholder="Pedra" required>
+                    <input type="number" id="ci" placeholder="Cimento" required>
+                </div>
+            </div>
+            <label for="comp">Comprimento</label>
+            <input id="comp" type="text" required>
+            <label id="tipoLarg" for="larg">Largura</label>
+            <input id="larg" type="text" required>
+            <label for="esp">Espessura</label>
+            <input id="esp" type="text" required>
             <button id="calc">Calcular</button>
         </section>
-        <div class="result">
-            <h2>Resultados:</h2>
-            <div class="result__num">
-                <span>Areia:<span id="areia"> 0</span></span>
-                <span>Pedra:<span id="pedra"> 0</span></span>
-                <span>Cimento:<span id="cimento"> 0</span></span>
-            </div>
-        </div>
     </main>
     <footer>
-        <button onclick="setTipo()" id="concre">Concreto</button>
-        <button onclick="setTipo()" id="reboc">Reboco</button>
-        <button onclick="setTipo()" id="conPiso">Contra-piso</button>
+        <h2>Resultados:</h2>
+        <div class="result">
+            <div>
+                <span>Areia:</span>
+                <span id="areia">0</span>
+            </div>
+            <div>
+                <span>Pedra:</span>
+                <span id="pedra">0</span>
+            </div>
+            <div>
+                <span>Cimento:</span>
+                <span id="cimento">0</span>
+            </div>
+        </div>
     </footer>
 
     <script src="script.js"></script>
