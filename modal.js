@@ -18,9 +18,3 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
-
-// Exemplo de ação dentro do modal
-document.getElementById("modalAction").onclick = function() {
-  alert("Ação executada!");
-  modal.style.display = "none";
-}
