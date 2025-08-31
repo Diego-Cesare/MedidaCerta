@@ -1,76 +1,73 @@
 <!doctype html>
 <html lang="pt_BR">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="style.css" />
-        <title>Traço</title>
-    </head>
 
-    <body>
-        <header>
-            <h3>Medida Certa</h3>
-            <div class="menu">
-                <button onclick="setTipo()" id="concre">Concreto</button>
-                <button onclick="setTipo()" id="reboc">Reboco</button>
-                <button onclick="setTipo()" id="conPiso">Contra-piso</button>
-            </div>
-        </header>
-        <main>
-            <div class="material">
-                <h3 id="tipo">Concreto</h3>
-            </div>
-            <section>
-                <div class="medida-massa">
-                    <span>Digite o traço da mistura</span>
-                    <div class="quantidade">
-                        <input
-                            type="number"
-                            id="ar"
-                            placeholder="Areia"
-                            required
-                        />
-                        <input
-                            type="number"
-                            id="pe"
-                            placeholder="Pedra"
-                            required
-                        />
-                        <input
-                            type="number"
-                            id="ci"
-                            placeholder="Cimento"
-                            required
-                        />
-                    </div>
-                </div>
-                <label for="comp">Comprimento</label>
-                <input id="comp" type="number" required />
-                <label id="tipoLarg" for="larg">Largura</label>
-                <input id="larg" type="number" required />
-                <label for="esp">Espessura</label>
-                <input id="esp" type="number" placeholder="Em centímetros" required />
-                <button id="calc">Calcular</button>
-            </section>
-        </main>
-        <footer>
-            <h2>Resultados:</h2>
-            <div class="result">
-                <div>
-                    <span>Areia:</span>
-                    <span id="areia">0</span>
-                </div>
-                <div>
-                    <span>Pedra:</span>
-                    <span id="pedra">0</span>
-                </div>
-                <div>
-                    <span>Cimento:</span>
-                    <span id="cimento">0</span>
-                </div>
-            </div>
-        </footer>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Traço</title>
+</head>
 
-        <script src="script.js"></script>
-    </body>
+<body>
+    <button id="colabore">Colabore com o projeto</button>
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Doe qualquer valor!</h2>
+            <p>Pix: <strong>48988734005</strong></p>
+        </div>
+    </div>
+    <header>
+        <h3>Medida Certa</h3>
+        <div class="menu">
+            <button onclick="setTipo()" id="concre">Concreto</button>
+            <button onclick="setTipo()" id="reboc">Reboco</button>
+            <button onclick="setTipo()" id="conPiso">Contra-piso</button>
+        </div>
+    </header>
+    <main>
+        <div class="material">
+            <h3 id="tipo">Concreto</h3>
+        </div>
+        <section>
+            <div class="medida-massa">
+                <span>Digite o traço da mistura</span>
+                <div class="quantidade">
+                    <input type="number" id="ar" placeholder="Areia" required />
+                    <input type="number" id="pe" placeholder="Pedra" required />
+                    <input type="number" id="ci" placeholder="Cimento" required />
+                </div>
+            </div>
+            <label for="comp">Comprimento</label>
+            <input id="comp" type="number" required />
+            <label id="tipoLarg" for="larg">Largura</label>
+            <input id="larg" type="number" required />
+            <label for="esp">Espessura</label>
+            <input id="esp" type="number" placeholder="Em centímetros" required />
+            <button id="calc">Calcular</button>
+        </section>
+    </main>
+    <footer>
+        <h2>Resultados:</h2>
+        <div class="result">
+            <div>
+                <span>Areia:</span>
+                <span id="areia">0</span>
+            </div>
+            <div>
+                <span>Pedra:</span>
+                <span id="pedra">0</span>
+            </div>
+            <div>
+                <span>Cimento:</span>
+                <span id="cimento">0</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="modal.js"></script>
+</body>
+
 </html>
