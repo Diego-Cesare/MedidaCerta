@@ -97,7 +97,12 @@ calcBtn.addEventListener("click", (e) => {
 
   const qtdCimentoKg = qtdCimentoM3 * 1400;
 
-  cimento.textContent = ` ${Math.round(qtdCimentoKg)} kg | ${Math.round(qtdCimentoKg / 50)} sacas`;
+  if (Math.round(qtdCimentoKg < 50)) {
+    cimento.textContent = ` ${Math.round(qtdCimentoKg)} kg`;
+  } else {
+    cimento.textContent = ` ${Math.round(qtdCimentoKg)} kg | ${Math.round(qtdCimentoKg / 50)} sacas`;
+  }
+  
   areia.textContent = ` ${qtdAreia.toFixed(2)} m³`;
 
   comp.value = "";
